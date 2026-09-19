@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A data visualization research project exploring vehicle features and MSRP.">
+  <title>Auto Insights | Vehicle Price Research</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">AUTO<span>INSIGHTS</span></a>
+
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a>
+      <a href="#proposal">Research Proposal</a>
+      <a href="#dataset">Dataset</a>
+      <a href="#assignments">Assignments</a>
+      <a href="#references">References</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="overview">
+      <div class="hero-content">
+        <p class="eyebrow">APPLIED DATA VISUALIZATION</p>
+        <h1>What drives<br><span>car prices?</span></h1>
+        <p class="hero-description">
+          Exploring how brand, performance, efficiency, and vehicle
+          design relate to manufacturer suggested retail prices.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#proposal">Explore the research ↗</a>
+          <a class="button secondary" href="#dataset">Meet the dataset</a>
+        </div>
+
+        <p class="author">Carson Davis · Semester Research Project</p>
+      </div>
+
+      <aside class="hero-card" aria-label="Project summary">
+        <p class="eyebrow">THE RESEARCH ROADMAP</p>
+        <h2>From raw data<br>to meaningful insight.</h2>
+        <div class="summary-row">
+          <span>Focus</span>
+          <strong>Vehicle features & MSRP</strong>
+        </div>
+        <div class="summary-row">
+          <span>Source</span>
+          <strong>Kaggle</strong>
+        </div>
+        <div class="summary-row">
+          <span>Course stages</span>
+          <strong>12 assignments</strong>
+        </div>
+        <div class="summary-row">
+          <span>Current stage</span>
+          <strong>Research proposal</strong>
+        </div>
+        <p class="card-note">
+          Findings and charts will be added after the dataset is
+          inspected, cleaned, and analyzed.
+        </p>
+      </aside>
+    </section>
+
+    <section class="section" id="proposal">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ASSIGNMENT 01</p>
+          <h2>Research question & proposal</h2>
+        </div>
+        <span class="badge">Proposal draft</span>
+      </div>
+
+      <div class="grid two-columns">
+        <article class="card">
+          <h3>Research topic</h3>
+          <p>
+            The relationship between vehicle characteristics and
+            manufacturer suggested retail price, or MSRP.
+          </p>
+
+          <h3>The real-world problem</h3>
+          <p>
+            Car buyers compare vehicles with different brands, engine
+            specifications, body styles, and fuel economy ratings.
+            These differences make it difficult to understand how
+            listed prices relate to measurable features.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Why this matters</h3>
+          <p>
+            Understanding price patterns could help consumers compare
+            vehicles and help marketers explain how products are
+            positioned across different market segments.
+          </p>
+          <p>
+            This project examines MSRP in the selected dataset.
+            It does not estimate current dealership prices,
+            used-car resale values, or the total cost of ownership.
+          </p>
+        </article>
+      </div>
+
+      <article class="research-question">
+        <p class="eyebrow">PRIMARY RESEARCH QUESTION</p>
+        <h3>
+          How do vehicle specifications and brand relate to MSRP
+          in the Car Features and MSRP dataset?
+        </h3>
+      </article>
+
+      <div class="grid two-columns">
+        <article class="card">
+          <h3>Research sub-questions</h3>
+          <ol class="question-list">
+            <li>How does MSRP vary across vehicle brands?</li>
+            <li>What relationship exists between horsepower and MSRP?</li>
+            <li>How does MSRP differ across body styles and vehicle sizes?</li>
+            <li>How do city and highway fuel economy relate to MSRP?</li>
+            <li>
+              Does the relationship between horsepower and MSRP remain
+              after accounting for brand and model year?
+            </li>
+          </ol>
+        </article>
+
+        <article class="card">
+          <h3>Preliminary hypotheses</h3>
+          <p>
+            <strong>H1:</strong> Vehicles with higher horsepower will
+            tend to have higher MSRP.
+          </p>
+          <p>
+            <strong>H2:</strong> MSRP will differ across brands, even
+            after accounting for horsepower and model year.
+          </p>
+          <p class="muted">
+            These are predictions to test, not established findings.
+            Observed associations will not establish causation.
+          </p>
+        </article>
+      </div>
+
+      <article class="card variable-card">
+        <h3>Potential variables</h3>
+        <p>
+          Candidate variables will be checked against the downloaded
+          CSV before analysis.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Planned roles of variables in the research</caption>
+            <thead>
+              <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Role</th>
+                <th scope="col">Research use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MSRP</td>
+                <td>Outcome</td>
+                <td>Compare manufacturer suggested prices</td>
+              </tr>
+              <tr>
+                <td>Make / brand</td>
+                <td>Explanatory</td>
+                <td>Explore differences between brands</td>
+              </tr>
+              <tr>
+                <td>Engine horsepower</td>
+                <td>Explanatory</td>
+                <td>Examine performance and price</td>
+              </tr>
+              <tr>
+                <td>Model year</td>
+                <td>Control / grouping</td>
+                <td>Account for differences across model years</td>
+              </tr>
+              <tr>
+                <td>City and highway MPG</td>
+                <td>Explanatory</td>
+                <td>Explore fuel efficiency and price</td>
+              </tr>
+              <tr>
+                <td>Vehicle size and style</td>
+                <td>Explanatory</td>
+                <td>Compare vehicle categories</td>
+              </tr>
+              <tr>
+                <td>Transmission and driven wheels</td>
+                <td>Explanatory</td>
+                <td>Explore drivetrain-related price patterns</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="dataset">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE DATA FOUNDATION</p>
+          <h2>Meet the dataset</h2>
+        </div>
+      </div>
+
+      <article class="card dataset-card">
+        <div>
+          <h3>Car Features and MSRP</h3>
+          <p>
+            The selected source is Cooper Union's dataset on Kaggle.
+            The project will investigate its vehicle specifications
+            and manufacturer suggested retail prices.
+          </p>
+          <p>
+            Dataset dimensions, missing values, duplicate records,
+            units, coverage, and licensing will be documented during
+            Assignment 2.
+          </p>
+          <p class="muted">
+            A dedicated dataset page with a data dictionary and
+            preview table will be added after the CSV is inspected.
+          </p>
+        </div>
+
+        <a class="button primary"
+          href="https://www.kaggle.com/datasets/CooperUnion/cardataset"
+          target="_blank" rel="noopener noreferrer">
+          View Kaggle source ↗
+        </a>
+      </article>
+    </section>
+
+    <section class="section" id="assignments">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FROM KAGGLE TO RESEARCH</p>
+          <h2>The 12-assignment journey</h2>
+        </div>
+      </div>
+
+      <div class="assignment-grid">
+        <article class="assignment-card active">
+          <span class="assignment-number">01</span>
+          <span class="status">Draft available</span>
+          <h3>Research Proposal</h3>
+          <p>Problem, questions, variables, and hypotheses.</p>
+          <a href="#proposal">Read proposal →</a>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">02</span>
+          <span class="status">Planned</span>
+          <h3>Dataset Investigation</h3>
+          <p>Source, structure, variable definitions, and limitations.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">03</span>
+          <span class="status">Planned</span>
+          <h3>Data Preparation</h3>
+          <p>Missing values, duplicates, types, and cleaning decisions.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">04</span>
+          <span class="status">Planned</span>
+          <h3>SQL Analysis</h3>
+          <p>Queries, grouped comparisons, and documented results.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">05</span>
+          <span class="status">Planned</span>
+          <h3>Exploratory Analysis</h3>
+          <p>Distributions, unusual values, and initial relationships.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">06</span>
+          <span class="status">Planned</span>
+          <h3>Static Visualization</h3>
+          <p>Clear charts with appropriate labels and explanations.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">07</span>
+          <span class="status">Planned</span>
+          <h3>Analytical Findings</h3>
+          <p>Hypothesis testing, uncertainty, and interpretation.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">08</span>
+          <span class="status">Planned</span>
+          <h3>Interactive Visualization</h3>
+          <p>Interactive charts for exploring the cleaned data.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">09</span>
+          <span class="status">Planned</span>
+          <h3>Dashboard & Story</h3>
+          <p>Connected visualizations and an evidence-based narrative.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">10</span>
+          <span class="status">Planned</span>
+          <h3>Ethics & Accessibility</h3>
+          <p>Bias, responsible interpretation, and accessible design.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">11</span>
+          <span class="status">Planned</span>
+          <h3>Paper Draft</h3>
+          <p>Introduction, methods, results, discussion, and sources.</p>
+        </article>
+
+        <article class="assignment-card">
+          <span class="assignment-number">12</span>
+          <span class="status">Planned</span>
+          <h3>Final Research Paper</h3>
+          <p>Revised paper and supporting reproducible materials.</p>
+        </article>
+      </div>
+
+      <p class="section-note">
+        Kaggle competition participation is also a course learning
+        goal. Its requirements and placement will be confirmed with
+        the instructor.
+      </p>
+    </section>
+
+    <section class="section" id="references">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SOURCE DOCUMENTATION</p>
+          <h2>References</h2>
+        </div>
+      </div>
+
+      <article class="card">
+        <p>
+          Cooper Union. (n.d.).
+          <cite>Car Features and MSRP</cite> [Data set]. Kaggle.
+          <a href="https://www.kaggle.com/datasets/CooperUnion/cardataset"
+            target="_blank" rel="noopener noreferrer">
+            Open dataset source
+          </a>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AUTO INSIGHTS · Carson Davis</p>
+    <p>Applied Data Visualization · Course Research Project</p>
+    <a href="#main">Back to top ↑</a>
+  </footer>
+</body>
+</html>
