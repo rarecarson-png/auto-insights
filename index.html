@@ -17,7 +17,7 @@
     <nav aria-label="Main navigation">
       <a href="#overview">Overview</a>
       <a href="#proposal">Research Proposal</a>
-      <a href="#dataset">Dataset</a>
+      <a href="dataset.html">Dataset</a>
       <a href="#assignments">Assignments</a>
       <a href="#references">References</a>
     </nav>
@@ -28,14 +28,19 @@
       <div class="hero-content">
         <p class="eyebrow">APPLIED DATA VISUALIZATION</p>
         <h1>What drives<br><span>car prices?</span></h1>
+
         <p class="hero-description">
           Exploring how brand, performance, efficiency, and vehicle
           design relate to manufacturer suggested retail prices.
         </p>
 
         <div class="hero-actions">
-          <a class="button primary" href="#proposal">Explore the research ↗</a>
-          <a class="button secondary" href="#dataset">Meet the dataset</a>
+          <a class="button primary" href="#proposal">
+            Explore the research ↗
+          </a>
+          <a class="button secondary" href="dataset.html">
+            Meet the dataset
+          </a>
         </div>
 
         <p class="author">Carson Davis · Semester Research Project</p>
@@ -44,25 +49,30 @@
       <aside class="hero-card" aria-label="Project summary">
         <p class="eyebrow">THE RESEARCH ROADMAP</p>
         <h2>From raw data<br>to meaningful insight.</h2>
+
         <div class="summary-row">
           <span>Focus</span>
-          <strong>Vehicle features & MSRP</strong>
+          <strong>Vehicle features &amp; MSRP</strong>
         </div>
+
         <div class="summary-row">
           <span>Source</span>
           <strong>Kaggle</strong>
         </div>
+
         <div class="summary-row">
           <span>Course stages</span>
           <strong>12 assignments</strong>
         </div>
+
         <div class="summary-row">
-          <span>Current stage</span>
-          <strong>Research proposal</strong>
+          <span>Current work</span>
+          <strong>Proposal &amp; dataset inspection</strong>
         </div>
+
         <p class="card-note">
-          Findings and charts will be added after the dataset is
-          inspected, cleaned, and analyzed.
+          The original dataset has been inspected. Analytical findings
+          and charts will follow data preparation and analysis.
         </p>
       </aside>
     </section>
@@ -71,7 +81,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">ASSIGNMENT 01</p>
-          <h2>Research question & proposal</h2>
+          <h2>Research question &amp; proposal</h2>
         </div>
         <span class="badge">Proposal draft</span>
       </div>
@@ -101,9 +111,11 @@
             positioned across different market segments.
           </p>
           <p>
-            This project examines MSRP in the selected dataset.
-            It does not estimate current dealership prices,
+            This project examines the field labeled MSRP in the selected
+            dataset. It does not estimate current dealership prices,
             used-car resale values, or the total cost of ownership.
+            Price definitions and unusual values require further
+            source validation.
           </p>
         </article>
       </div>
@@ -122,7 +134,9 @@
           <ol class="question-list">
             <li>How does MSRP vary across vehicle brands?</li>
             <li>What relationship exists between horsepower and MSRP?</li>
-            <li>How does MSRP differ across body styles and vehicle sizes?</li>
+            <li>
+              How does MSRP differ across body styles and vehicle sizes?
+            </li>
             <li>How do city and highway fuel economy relate to MSRP?</li>
             <li>
               Does the relationship between horsepower and MSRP remain
@@ -151,16 +165,18 @@
       <article class="card variable-card">
         <h3>Potential variables</h3>
         <p>
-          Candidate variables will be checked against the downloaded
-          CSV before analysis.
+          The following variables are present in the uploaded CSV.
+          Their definitions and suitability will be reviewed before
+          statistical analysis.
         </p>
 
-        <div class="table-wrap">
+        <div class="table-wrap" tabindex="0"
+          role="region" aria-label="Research variables table">
           <table>
             <caption>Planned roles of variables in the research</caption>
             <thead>
               <tr>
-                <th scope="col">Variable</th>
+                <th scope="col">CSV variable</th>
                 <th scope="col">Role</th>
                 <th scope="col">Research use</th>
               </tr>
@@ -169,35 +185,35 @@
               <tr>
                 <td>MSRP</td>
                 <td>Outcome</td>
-                <td>Compare manufacturer suggested prices</td>
+                <td>Compare recorded prices</td>
               </tr>
               <tr>
-                <td>Make / brand</td>
+                <td>Make</td>
                 <td>Explanatory</td>
                 <td>Explore differences between brands</td>
               </tr>
               <tr>
-                <td>Engine horsepower</td>
+                <td>Engine HP</td>
                 <td>Explanatory</td>
                 <td>Examine performance and price</td>
               </tr>
               <tr>
-                <td>Model year</td>
+                <td>Year</td>
                 <td>Control / grouping</td>
                 <td>Account for differences across model years</td>
               </tr>
               <tr>
-                <td>City and highway MPG</td>
+                <td>city mpg and highway MPG</td>
                 <td>Explanatory</td>
                 <td>Explore fuel efficiency and price</td>
               </tr>
               <tr>
-                <td>Vehicle size and style</td>
+                <td>Vehicle Size and Vehicle Style</td>
                 <td>Explanatory</td>
                 <td>Compare vehicle categories</td>
               </tr>
               <tr>
-                <td>Transmission and driven wheels</td>
+                <td>Transmission Type and Driven_Wheels</td>
                 <td>Explanatory</td>
                 <td>Explore drivetrain-related price patterns</td>
               </tr>
@@ -220,24 +236,23 @@
           <h3>Car Features and MSRP</h3>
           <p>
             The selected source is Cooper Union's dataset on Kaggle.
-            The project will investigate its vehicle specifications
-            and manufacturer suggested retail prices.
+            The uploaded CSV contains 11,914 records, 16 columns,
+            and 48 brands, covering model years 1990–2017.
           </p>
           <p>
-            Dataset dimensions, missing values, duplicate records,
-            units, coverage, and licensing will be documented during
-            Assignment 2.
+            Explore the original records on the dedicated dataset page.
+            Search vehicle names, filter by brand, sort prices,
+            and review the data dictionary and initial quality checks.
           </p>
           <p class="muted">
-            A dedicated dataset page with a data dictionary and
-            preview table will be added after the CSV is inspected.
+            The explorer preserves the original records, including
+            missing values and repeated rows. Cleaning decisions
+            will be documented separately.
           </p>
         </div>
 
-        <a class="button primary"
-          href="https://www.kaggle.com/datasets/CooperUnion/cardataset"
-          target="_blank" rel="noopener noreferrer">
-          View Kaggle source ↗
+        <a class="button primary" href="dataset.html">
+          Explore the dataset ↗
         </a>
       </article>
     </section>
@@ -259,11 +274,15 @@
           <a href="#proposal">Read proposal →</a>
         </article>
 
-        <article class="assignment-card">
+        <article class="assignment-card active">
           <span class="assignment-number">02</span>
-          <span class="status">Planned</span>
+          <span class="status">In progress</span>
           <h3>Dataset Investigation</h3>
-          <p>Source, structure, variable definitions, and limitations.</p>
+          <p>
+            Original records, data dictionary, quality checks,
+            and limitations.
+          </p>
+          <a href="dataset.html">Explore dataset →</a>
         </article>
 
         <article class="assignment-card">
@@ -311,14 +330,14 @@
         <article class="assignment-card">
           <span class="assignment-number">09</span>
           <span class="status">Planned</span>
-          <h3>Dashboard & Story</h3>
+          <h3>Dashboard &amp; Story</h3>
           <p>Connected visualizations and an evidence-based narrative.</p>
         </article>
 
         <article class="assignment-card">
           <span class="assignment-number">10</span>
           <span class="status">Planned</span>
-          <h3>Ethics & Accessibility</h3>
+          <h3>Ethics &amp; Accessibility</h3>
           <p>Bias, responsible interpretation, and accessible design.</p>
         </article>
 
@@ -360,6 +379,11 @@
             target="_blank" rel="noopener noreferrer">
             Open dataset source
           </a>.
+        </p>
+        <p>
+          Dataset counts and initial quality checks were calculated
+          from the uploaded original data.csv file.
+          <a href="dataset.html">View dataset documentation</a>.
         </p>
       </article>
     </section>
