@@ -1,0 +1,16 @@
+AUTO INSIGHTS — ASSIGNMENT 3
+
+1. Extract the ZIP (Windows: right-click > Extract All).
+2. Open https://github.com/rarecarson-png/auto-insights
+3. Choose Add file (+) > Upload files.
+4. Upload every file from this extracted folder EXCEPT this instruction file.
+   Upload the files themselves, not the ZIP or a containing folder.
+5. This replaces index.html to add Assignment 3 links. All other filenames are new.
+   Keep the existing data.csv, dataset.html, assignment2.html, style.css, and other files.
+6. Commit changes to main. Wait for the latest Pages deployment to turn green.
+7. Open https://rarecarson-png.github.io/auto-insights/assignment3.html
+8. Confirm the page loads and the cleaned CSV download works.
+9. Submit that page URL if your instructor accepts website submissions.
+
+The raw dataset is not changed. Cleaned data has 11,199 records and 35 columns.
+To reproduce analysis, follow the commands on the Assignment 3 page.

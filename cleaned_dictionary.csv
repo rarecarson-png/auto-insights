@@ -1,0 +1,36 @@
+column,python_dtype,missing,description
+source_row_id,int64,0,Unique original CSV data-record number; header excluded. Not a vehicle ID.
+make,object,0,Prepared source field; see cleaning decisions and original data dictionary.
+model,object,0,Prepared source field; see cleaning decisions and original data dictionary.
+year,Int64,0,Prepared source field; see cleaning decisions and original data dictionary.
+fuel_type,object,3,Prepared source field; see cleaning decisions and original data dictionary.
+engine_hp,Int64,69,Prepared source field; see cleaning decisions and original data dictionary.
+engine_cylinders,Int64,30,Prepared source field; see cleaning decisions and original data dictionary.
+transmission,object,12,Prepared source field; see cleaning decisions and original data dictionary.
+driven_wheels,object,0,Prepared source field; see cleaning decisions and original data dictionary.
+doors,Int64,6,Prepared source field; see cleaning decisions and original data dictionary.
+market_category,object,3376,Prepared source field; see cleaning decisions and original data dictionary.
+vehicle_size,object,0,Prepared source field; see cleaning decisions and original data dictionary.
+vehicle_style,object,0,Prepared source field; see cleaning decisions and original data dictionary.
+highway_mpg,Int64,1,Prepared source field; see cleaning decisions and original data dictionary.
+city_mpg,Int64,0,Prepared source field; see cleaning decisions and original data dictionary.
+popularity,Int64,0,Prepared source field; see cleaning decisions and original data dictionary.
+msrp,Int64,0,Prepared source field; see cleaning decisions and original data dictionary.
+highway_mpg_review_flag,boolean,0,Non-electric highway >150 was set missing for analysis; see change log.
+electric_efficiency_review_flag,bool,0,Electric record: efficiency unit needs source verification before comparison with gasoline MPG.
+msrp_floor_review_flag,boolean,0,MSRP equals source minimum 2000; price construction needs verification.
+fuel_type_missing,bool,0,Missingness flag: true means missing.
+engine_hp_missing,bool,0,Missingness flag: true means missing.
+engine_cylinders_missing,bool,0,Missingness flag: true means missing.
+doors_missing,bool,0,Missingness flag: true means missing.
+market_category_missing,bool,0,Missingness flag: true means missing.
+transmission_missing,bool,0,Missingness flag: true means missing.
+highway_mpg_missing,bool,0,Missingness flag: true means missing.
+msrp_iqr_outlier,boolean,0,Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained.
+engine_hp_iqr_outlier,boolean,0,Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained.
+engine_cylinders_iqr_outlier,boolean,0,Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained.
+city_mpg_iqr_outlier,boolean,0,Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained.
+highway_mpg_iqr_outlier,boolean,0,Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained.
+log10_msrp,float64,0,Base-10 logarithm of original positive MSRP; dollar values retained.
+core_analysis_ready,bool,0,"Nonmissing make, model, year, engine_hp, msrp; pairwise or other models need their own masks."
+fuel_economy_analysis_ready,bool,0,Known non-electric fuel and nonmissing city/highway efficiency; conservative unit-comparability subset.

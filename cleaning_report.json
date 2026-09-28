@@ -1,0 +1,341 @@
+{
+  "source_sha256": "26e39d3e902246d01a93ae390f51129a288079aefad2cb3292751a262ffd62d8",
+  "source_bytes": 1475504,
+  "input_rows": 11914,
+  "original_columns": 16,
+  "exact_duplicates_removed": 715,
+  "prepared_rows": 11199,
+  "prepared_columns": 35,
+  "raw_blanks": {
+    "make": 0,
+    "model": 0,
+    "year": 0,
+    "fuel_type": 3,
+    "engine_hp": 69,
+    "engine_cylinders": 30,
+    "transmission": 0,
+    "driven_wheels": 0,
+    "doors": 6,
+    "market_category": 0,
+    "vehicle_size": 0,
+    "vehicle_style": 0,
+    "highway_mpg": 0,
+    "city_mpg": 0,
+    "popularity": 0,
+    "msrp": 0
+  },
+  "retained_blanks_before_cleaning": {
+    "make": 0,
+    "model": 0,
+    "year": 0,
+    "fuel_type": 3,
+    "engine_hp": 69,
+    "engine_cylinders": 30,
+    "transmission": 0,
+    "driven_wheels": 0,
+    "doors": 6,
+    "market_category": 0,
+    "vehicle_size": 0,
+    "vehicle_style": 0,
+    "highway_mpg": 0,
+    "city_mpg": 0,
+    "popularity": 0,
+    "msrp": 0
+  },
+  "missing_after": {
+    "make": 0,
+    "model": 0,
+    "year": 0,
+    "fuel_type": 3,
+    "engine_hp": 69,
+    "engine_cylinders": 30,
+    "transmission": 12,
+    "driven_wheels": 0,
+    "doors": 6,
+    "market_category": 3376,
+    "vehicle_size": 0,
+    "vehicle_style": 0,
+    "highway_mpg": 1,
+    "city_mpg": 0,
+    "popularity": 0,
+    "msrp": 0
+  },
+  "parse_failures": {
+    "year": 0,
+    "engine_hp": 0,
+    "engine_cylinders": 0,
+    "doors": 0,
+    "highway_mpg": 0,
+    "city_mpg": 0,
+    "popularity": 0,
+    "msrp": 0
+  },
+  "invalid_range_counts": {
+    "year": 0,
+    "engine_hp": 0,
+    "engine_cylinders": 0,
+    "doors": 0,
+    "highway_mpg": 0,
+    "city_mpg": 0,
+    "popularity": 0,
+    "msrp": 0
+  },
+  "suspect_highway_values_quarantined": 1,
+  "electric_records_flagged": 66,
+  "msrp_floor_flagged": 748,
+  "core_ready_rows": 11130,
+  "fuel_economy_ready_rows": 11129,
+  "outliers": {
+    "msrp": {
+      "q1": 21599.5,
+      "q3": 43032.5,
+      "lower_fence": -10550.0,
+      "upper_fence": 75182.0,
+      "flagged": 960
+    },
+    "engine_hp": {
+      "q1": 172.0,
+      "q3": 303.0,
+      "lower_fence": -24.5,
+      "upper_fence": 499.5,
+      "flagged": 502
+    },
+    "engine_cylinders": {
+      "q1": 4.0,
+      "q3": 6.0,
+      "lower_fence": 1.0,
+      "upper_fence": 9.0,
+      "flagged": 352
+    },
+    "city_mpg": {
+      "q1": 16.0,
+      "q3": 22.0,
+      "lower_fence": 7.0,
+      "upper_fence": 31.0,
+      "flagged": 305
+    },
+    "highway_mpg": {
+      "q1": 22.0,
+      "q3": 30.0,
+      "lower_fence": 10.0,
+      "upper_fence": 42.0,
+      "flagged": 181
+    }
+  },
+  "change_log_cells": 45871,
+  "checks_passed": true,
+  "python_pandas": "2.2.3",
+  "numpy": "2.3.5",
+  "dictionary": [
+    {
+      "column": "source_row_id",
+      "python_dtype": "int64",
+      "missing": 0,
+      "description": "Unique original CSV data-record number; header excluded. Not a vehicle ID."
+    },
+    {
+      "column": "make",
+      "python_dtype": "object",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "model",
+      "python_dtype": "object",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "year",
+      "python_dtype": "Int64",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "fuel_type",
+      "python_dtype": "object",
+      "missing": 3,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "engine_hp",
+      "python_dtype": "Int64",
+      "missing": 69,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "engine_cylinders",
+      "python_dtype": "Int64",
+      "missing": 30,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "transmission",
+      "python_dtype": "object",
+      "missing": 12,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "driven_wheels",
+      "python_dtype": "object",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "doors",
+      "python_dtype": "Int64",
+      "missing": 6,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "market_category",
+      "python_dtype": "object",
+      "missing": 3376,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "vehicle_size",
+      "python_dtype": "object",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "vehicle_style",
+      "python_dtype": "object",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "highway_mpg",
+      "python_dtype": "Int64",
+      "missing": 1,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "city_mpg",
+      "python_dtype": "Int64",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "popularity",
+      "python_dtype": "Int64",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "msrp",
+      "python_dtype": "Int64",
+      "missing": 0,
+      "description": "Prepared source field; see cleaning decisions and original data dictionary."
+    },
+    {
+      "column": "highway_mpg_review_flag",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "Non-electric highway >150 was set missing for analysis; see change log."
+    },
+    {
+      "column": "electric_efficiency_review_flag",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Electric record: efficiency unit needs source verification before comparison with gasoline MPG."
+    },
+    {
+      "column": "msrp_floor_review_flag",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "MSRP equals source minimum 2000; price construction needs verification."
+    },
+    {
+      "column": "fuel_type_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "engine_hp_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "engine_cylinders_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "doors_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "market_category_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "transmission_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "highway_mpg_missing",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Missingness flag: true means missing."
+    },
+    {
+      "column": "msrp_iqr_outlier",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained."
+    },
+    {
+      "column": "engine_hp_iqr_outlier",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained."
+    },
+    {
+      "column": "engine_cylinders_iqr_outlier",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained."
+    },
+    {
+      "column": "city_mpg_iqr_outlier",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained."
+    },
+    {
+      "column": "highway_mpg_iqr_outlier",
+      "python_dtype": "boolean",
+      "missing": 0,
+      "description": "Outside 1.5 IQR fences on prepared nonmissing values. Review only; retained."
+    },
+    {
+      "column": "log10_msrp",
+      "python_dtype": "float64",
+      "missing": 0,
+      "description": "Base-10 logarithm of original positive MSRP; dollar values retained."
+    },
+    {
+      "column": "core_analysis_ready",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Nonmissing make, model, year, engine_hp, msrp; pairwise or other models need their own masks."
+    },
+    {
+      "column": "fuel_economy_analysis_ready",
+      "python_dtype": "bool",
+      "missing": 0,
+      "description": "Known non-electric fuel and nonmissing city/highway efficiency; conservative unit-comparability subset."
+    }
+  ]
+}
