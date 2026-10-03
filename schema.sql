@@ -1,0 +1,42 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE transmissions (
+  transmission_id INTEGER PRIMARY KEY,
+  transmission_name TEXT NOT NULL UNIQUE
+);
+CREATE TABLE vehicles (
+  source_row_id INTEGER PRIMARY KEY,
+  make TEXT,
+  model TEXT,
+  year INTEGER,
+  fuel_type TEXT,
+  engine_hp INTEGER,
+  engine_cylinders INTEGER,
+  transmission_id INTEGER REFERENCES transmissions(transmission_id),
+  driven_wheels TEXT,
+  doors INTEGER,
+  market_category TEXT,
+  vehicle_size TEXT,
+  vehicle_style TEXT,
+  highway_mpg INTEGER,
+  city_mpg INTEGER,
+  popularity INTEGER,
+  msrp INTEGER,
+  highway_mpg_review_flag INTEGER,
+  electric_efficiency_review_flag INTEGER,
+  msrp_floor_review_flag INTEGER,
+  fuel_type_missing INTEGER,
+  engine_hp_missing INTEGER,
+  engine_cylinders_missing INTEGER,
+  doors_missing INTEGER,
+  market_category_missing INTEGER,
+  transmission_missing INTEGER,
+  highway_mpg_missing INTEGER,
+  msrp_iqr_outlier INTEGER,
+  engine_hp_iqr_outlier INTEGER,
+  engine_cylinders_iqr_outlier INTEGER,
+  city_mpg_iqr_outlier INTEGER,
+  highway_mpg_iqr_outlier INTEGER,
+  log10_msrp REAL,
+  core_analysis_ready INTEGER,
+  fuel_economy_analysis_ready INTEGER
+);

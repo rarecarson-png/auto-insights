@@ -1,0 +1,634 @@
+{
+  "metadata": {
+    "source_sha256": "e7f3812484b4444be6d905846774524dab7c28cbeb22a6a0140f967b60b2644c",
+    "records": 11199,
+    "transmission_categories": 4,
+    "sqlite_version": "3.53.1",
+    "unknown_transmissions": 12
+  },
+  "queries": [
+    {
+      "number": 1,
+      "title": "Basic selection",
+      "description": "Inspect ten vehicle records and the fields used in the price analysis.",
+      "sql": "SELECT source_row_id, make, model, year, engine_hp, msrp\nFROM vehicles\nORDER BY source_row_id\nLIMIT 10;",
+      "fields": [
+        "source_row_id",
+        "make",
+        "model",
+        "year",
+        "engine_hp",
+        "msrp"
+      ],
+      "rows": [
+        [
+          1,
+          "BMW",
+          "1 Series M",
+          2011,
+          335,
+          46135
+        ],
+        [
+          2,
+          "BMW",
+          "1 Series",
+          2011,
+          300,
+          40650
+        ],
+        [
+          3,
+          "BMW",
+          "1 Series",
+          2011,
+          300,
+          36350
+        ],
+        [
+          4,
+          "BMW",
+          "1 Series",
+          2011,
+          230,
+          29450
+        ],
+        [
+          5,
+          "BMW",
+          "1 Series",
+          2011,
+          230,
+          34500
+        ],
+        [
+          6,
+          "BMW",
+          "1 Series",
+          2012,
+          230,
+          31200
+        ],
+        [
+          7,
+          "BMW",
+          "1 Series",
+          2012,
+          300,
+          44100
+        ],
+        [
+          8,
+          "BMW",
+          "1 Series",
+          2012,
+          300,
+          39300
+        ],
+        [
+          9,
+          "BMW",
+          "1 Series",
+          2012,
+          230,
+          36900
+        ],
+        [
+          10,
+          "BMW",
+          "1 Series",
+          2013,
+          230,
+          37200
+        ]
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Filtering",
+      "description": "Find a reproducible example of newer model-year records. The ten displayed rows are a sample, not all matches.",
+      "sql": "SELECT source_row_id, make, model, year, msrp\nFROM vehicles\nWHERE year >= 2015\nORDER BY source_row_id\nLIMIT 10;",
+      "fields": [
+        "source_row_id",
+        "make",
+        "model",
+        "year",
+        "msrp"
+      ],
+      "rows": [
+        [
+          33,
+          "FIAT",
+          "124 Spider",
+          2017,
+          27495
+        ],
+        [
+          34,
+          "FIAT",
+          "124 Spider",
+          2017,
+          24995
+        ],
+        [
+          35,
+          "FIAT",
+          "124 Spider",
+          2017,
+          28195
+        ],
+        [
+          42,
+          "BMW",
+          "2 Series",
+          2016,
+          32850
+        ],
+        [
+          43,
+          "BMW",
+          "2 Series",
+          2016,
+          38650
+        ],
+        [
+          44,
+          "BMW",
+          "2 Series",
+          2016,
+          48750
+        ],
+        [
+          45,
+          "BMW",
+          "2 Series",
+          2016,
+          34850
+        ],
+        [
+          46,
+          "BMW",
+          "2 Series",
+          2016,
+          40650
+        ],
+        [
+          47,
+          "BMW",
+          "2 Series",
+          2016,
+          44150
+        ],
+        [
+          48,
+          "BMW",
+          "2 Series",
+          2016,
+          32850
+        ]
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Multiple conditions",
+      "description": "Find recent-model-year records combining at least 300 horsepower with a recorded MSRP below $40,000.",
+      "sql": "SELECT source_row_id, make, model, year, engine_hp, msrp\nFROM vehicles\nWHERE year >= 2015 AND engine_hp >= 300 AND msrp < 40000\nORDER BY msrp ASC, source_row_id ASC\nLIMIT 10;",
+      "fields": [
+        "source_row_id",
+        "make",
+        "model",
+        "year",
+        "engine_hp",
+        "msrp"
+      ],
+      "rows": [
+        [
+          2181,
+          "Chevrolet",
+          "Camaro",
+          2015,
+          323,
+          23705
+        ],
+        [
+          7077,
+          "Ford",
+          "Mustang",
+          2015,
+          300,
+          23800
+        ],
+        [
+          7082,
+          "Ford",
+          "Mustang",
+          2016,
+          300,
+          24145
+        ],
+        [
+          7089,
+          "Ford",
+          "Mustang",
+          2017,
+          300,
+          24645
+        ],
+        [
+          2182,
+          "Chevrolet",
+          "Camaro",
+          2015,
+          323,
+          25145
+        ],
+        [
+          7074,
+          "Ford",
+          "Mustang",
+          2015,
+          310,
+          25300
+        ],
+        [
+          7087,
+          "Ford",
+          "Mustang",
+          2016,
+          310,
+          25645
+        ],
+        [
+          7088,
+          "Ford",
+          "Mustang",
+          2017,
+          310,
+          25645
+        ],
+        [
+          5819,
+          "Chevrolet",
+          "Impala Limited",
+          2015,
+          300,
+          25830
+        ],
+        [
+          5823,
+          "Chevrolet",
+          "Impala Limited",
+          2016,
+          300,
+          25830
+        ]
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Sorting",
+      "description": "Identify the ten highest recorded prices for inspection. High prices remain in the data.",
+      "sql": "SELECT source_row_id, make, model, year, engine_hp, msrp\nFROM vehicles\nWHERE msrp IS NOT NULL\nORDER BY msrp DESC, source_row_id ASC\nLIMIT 10;",
+      "fields": [
+        "source_row_id",
+        "make",
+        "model",
+        "year",
+        "engine_hp",
+        "msrp"
+      ],
+      "rows": [
+        [
+          11363,
+          "Bugatti",
+          "Veyron 16.4",
+          2008,
+          1001,
+          2065902
+        ],
+        [
+          11365,
+          "Bugatti",
+          "Veyron 16.4",
+          2009,
+          1001,
+          1705769
+        ],
+        [
+          8487,
+          "Lamborghini",
+          "Reventon",
+          2008,
+          650,
+          1500000
+        ],
+        [
+          11364,
+          "Bugatti",
+          "Veyron 16.4",
+          2008,
+          1001,
+          1500000
+        ],
+        [
+          6352,
+          "Maybach",
+          "Landaulet",
+          2012,
+          620,
+          1382750
+        ],
+        [
+          6351,
+          "Maybach",
+          "Landaulet",
+          2011,
+          620,
+          1380000
+        ],
+        [
+          4025,
+          "Ferrari",
+          "Enzo",
+          2003,
+          660,
+          643330
+        ],
+        [
+          1623,
+          "Lamborghini",
+          "Aventador",
+          2014,
+          720,
+          548800
+        ],
+        [
+          1627,
+          "Lamborghini",
+          "Aventador",
+          2015,
+          720,
+          548800
+        ],
+        [
+          1630,
+          "Lamborghini",
+          "Aventador",
+          2016,
+          750,
+          535500
+        ]
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Aggregation",
+      "description": "Summarize dataset coverage and available-case averages. COUNT(column) shows each numeric denominator.",
+      "sql": "SELECT COUNT(*) AS records,\n       MIN(year) AS earliest_year, MAX(year) AS latest_year,\n       COUNT(msrp) AS price_records,\n       ROUND(AVG(msrp), 2) AS avg_msrp,\n       COUNT(engine_hp) AS hp_records,\n       ROUND(AVG(engine_hp), 2) AS avg_hp\nFROM vehicles;",
+      "fields": [
+        "records",
+        "earliest_year",
+        "latest_year",
+        "price_records",
+        "avg_msrp",
+        "hp_records",
+        "avg_hp"
+      ],
+      "rows": [
+        [
+          11199,
+          1990,
+          2017,
+          11199,
+          41925.93,
+          11130,
+          253.39
+        ]
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Group comparison",
+      "description": "Compare average recorded MSRP across vehicle sizes. This result supplies Visualization 1.",
+      "sql": "SELECT vehicle_size, COUNT(*) AS records,\n       ROUND(AVG(msrp), 2) AS avg_msrp\nFROM vehicles\nWHERE vehicle_size IS NOT NULL AND msrp IS NOT NULL\nGROUP BY vehicle_size\nORDER BY avg_msrp DESC, vehicle_size ASC;",
+      "fields": [
+        "vehicle_size",
+        "records",
+        "avg_msrp"
+      ],
+      "rows": [
+        [
+          "large",
+          2683,
+          55352.12
+        ],
+        [
+          "midsize",
+          4121,
+          40031.29
+        ],
+        [
+          "compact",
+          4395,
+          35506.2
+        ]
+      ]
+    },
+    {
+      "number": 7,
+      "title": "HAVING",
+      "description": "Compare every brand with at least 100 priced records. The threshold avoids the smallest groups but does not guarantee statistical reliability.",
+      "sql": "SELECT make, COUNT(*) AS records,\n       ROUND(AVG(msrp), 2) AS avg_msrp\nFROM vehicles\nWHERE make IS NOT NULL AND msrp IS NOT NULL\nGROUP BY make\nHAVING COUNT(*) >= 100\nORDER BY avg_msrp DESC, make ASC;",
+      "fields": [
+        "make",
+        "records",
+        "avg_msrp"
+      ],
+      "rows": [
+        [
+          "Porsche",
+          136,
+          101622.4
+        ],
+        [
+          "Mercedes-Benz",
+          341,
+          72069.53
+        ],
+        [
+          "Land Rover",
+          139,
+          68067.09
+        ],
+        [
+          "BMW",
+          324,
+          62162.56
+        ],
+        [
+          "Cadillac",
+          396,
+          56368.27
+        ],
+        [
+          "Audi",
+          321,
+          54574.12
+        ],
+        [
+          "Lexus",
+          202,
+          47549.07
+        ],
+        [
+          "Lincoln",
+          160,
+          43860.82
+        ],
+        [
+          "Infiniti",
+          328,
+          42640.27
+        ],
+        [
+          "Acura",
+          246,
+          35087.49
+        ],
+        [
+          "GMC",
+          482,
+          32444.09
+        ],
+        [
+          "Volvo",
+          266,
+          29724.68
+        ],
+        [
+          "Chevrolet",
+          1083,
+          29074.73
+        ],
+        [
+          "Buick",
+          190,
+          29034.19
+        ],
+        [
+          "Volkswagen",
+          568,
+          28978.52
+        ],
+        [
+          "Nissan",
+          551,
+          28921.15
+        ],
+        [
+          "Toyota",
+          719,
+          28846.56
+        ],
+        [
+          "Ford",
+          825,
+          28511.31
+        ],
+        [
+          "Saab",
+          109,
+          27879.81
+        ],
+        [
+          "Chrysler",
+          187,
+          26722.96
+        ],
+        [
+          "Honda",
+          433,
+          26655.15
+        ],
+        [
+          "Kia",
+          229,
+          25513.76
+        ],
+        [
+          "Hyundai",
+          259,
+          24926.26
+        ],
+        [
+          "Dodge",
+          529,
+          24857.05
+        ],
+        [
+          "Subaru",
+          239,
+          24240.67
+        ],
+        [
+          "Mitsubishi",
+          208,
+          21340.56
+        ],
+        [
+          "Mazda",
+          412,
+          20416.62
+        ],
+        [
+          "Pontiac",
+          181,
+          19800.04
+        ],
+        [
+          "Suzuki",
+          342,
+          18026.42
+        ],
+        [
+          "Oldsmobile",
+          132,
+          12843.8
+        ]
+      ]
+    },
+    {
+      "number": 8,
+      "title": "JOIN",
+      "description": "Join vehicle records to a transmission lookup, then compare average highway MPG in the eligible fuel-economy subset. This result supplies Visualization 2.",
+      "sql": "SELECT t.transmission_name, COUNT(*) AS records,\n       ROUND(AVG(v.highway_mpg), 2) AS avg_highway_mpg\nFROM vehicles AS v\nJOIN transmissions AS t ON v.transmission_id = t.transmission_id\nWHERE v.fuel_economy_analysis_ready = 1\nGROUP BY t.transmission_id, t.transmission_name\nORDER BY avg_highway_mpg DESC, t.transmission_name ASC;",
+      "fields": [
+        "transmission_name",
+        "records",
+        "avg_highway_mpg"
+      ],
+      "rows": [
+        [
+          "direct drive",
+          2,
+          44.5
+        ],
+        [
+          "automated manual",
+          552,
+          28.29
+        ],
+        [
+          "manual",
+          2634,
+          27.0
+        ],
+        [
+          "automatic",
+          7929,
+          25.72
+        ]
+      ]
+    }
+  ]
+}
