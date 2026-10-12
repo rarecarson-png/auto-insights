@@ -1,0 +1,13 @@
+model,vehicle_size,test_n,mae
+Median baseline,compact,699,19061.137339055793
+Median baseline,large,732,26740.0956284153
+Median baseline,midsize,893,14501.388577827547
+Linear Regression,compact,699,10235.553083892184
+Linear Regression,large,732,14404.848183081873
+Linear Regression,midsize,893,8415.592848255665
+Decision Tree,compact,699,6722.231737555747
+Decision Tree,large,732,12906.572028683971
+Decision Tree,midsize,893,7227.963670050143
+Random Forest,compact,699,4324.125187302463
+Random Forest,large,732,8150.171501572353
+Random Forest,midsize,893,6114.015122675999

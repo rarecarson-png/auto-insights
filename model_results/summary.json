@@ -1,0 +1,55 @@
+{
+  "records": 11199,
+  "train_records": 8875,
+  "test_records": 2324,
+  "train_groups": 742,
+  "test_groups": 186,
+  "group_overlap": 0,
+  "seed": 42,
+  "features": [
+    "year",
+    "engine_hp",
+    "engine_cylinders",
+    "make",
+    "vehicle_size",
+    "vehicle_style",
+    "transmission",
+    "driven_wheels"
+  ],
+  "sklearn": "1.8.0",
+  "source_sha256": "e7f3812484b4444be6d905846774524dab7c28cbeb22a6a0140f967b60b2644c",
+  "metrics": [
+    {
+      "model": "Median baseline",
+      "test_mae": 19727.721600688466,
+      "test_rmse": 49009.39323127783,
+      "test_r2": -0.0381479653514345,
+      "train_mae": 24636.03909859155,
+      "negative_predictions": 0
+    },
+    {
+      "model": "Linear Regression",
+      "test_mae": 10849.451329237898,
+      "test_rmse": 20731.95790674152,
+      "test_r2": 0.8142275782965859,
+      "train_mae": 10423.224569961238,
+      "negative_predictions": 129
+    },
+    {
+      "model": "Decision Tree",
+      "test_mae": 8864.467412608827,
+      "test_rmse": 21109.347535289682,
+      "test_r2": 0.8074026861534963,
+      "train_mae": 7496.560499470326,
+      "negative_predictions": 0
+    },
+    {
+      "model": "Random Forest",
+      "test_mae": 6216.998515329196,
+      "test_rmse": 13485.47385686133,
+      "test_r2": 0.9213981028073216,
+      "train_mae": 3062.9816559242317,
+      "negative_predictions": 0
+    }
+  ]
+}

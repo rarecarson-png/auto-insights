@@ -1,20 +1,17 @@
-AUTO INSIGHTS - HOMEPAGE AND MIDTERM FIX
+AUTO INSIGHTS - COMPLETE WEBSITE UPDATE
 
-Upload every extracted file and folder in this ZIP to the existing repository:
-https://github.com/rarecarson-png/auto-insights
-Use Add file > Upload files > Commit changes. Upload contents, not the ZIP itself.
-Keep existing files that are not included here, especially data.csv, dataset.html and style.css.
+1. Extract this ZIP.
+2. Open https://github.com/rarecarson-png/auto-insights
+3. Select Add file > Upload files.
+4. Upload ALL extracted files and folders, including index.html, visualizations.html, eda_figures and model_results. Upload contents, not the ZIP itself.
+5. Commit changes and wait for GitHub Pages to deploy.
+6. Open your website and press Ctrl+Shift+R to refresh.
 
-IMPORTANT: index.html IS included this time. Accept the update to that file.
-It activates Assignments 4 and 5, preserves links to 1-3, updates progress, and adds all midterm presentation sections.
-Assignments 6-12 remain Planned because those future assignments are not completed.
+Homepage: https://rarecarson-png.github.io/auto-insights/
+Visualizations & Model Comparison: https://rarecarson-png.github.io/auto-insights/visualizations.html
+Assignment 5: https://rarecarson-png.github.io/auto-insights/assignment5.html
 
-After GitHub Pages deploys, open:
-https://rarecarson-png.github.io/auto-insights/
-If the old homepage is cached, press Ctrl+Shift+R.
+This update includes Assignments 1-5, the dataset explorer, the midterm sections, ten exploratory charts, and a new tabbed page with real results from three trained models plus a baseline.
 
-Start the midterm using the Start midterm presentation button.
-Assignment 5 submission URL:
-https://rarecarson-png.github.io/auto-insights/assignment5.html
-
-AI models are described as planned. No trained-model scores have been invented.
+The model comparison is a preliminary single-split experiment, not final validated performance. Methods, limitations, scores, predictions, split membership and scripts are included. No Python is needed to view the website.
+Assignments 6-12 remain future coursework.
