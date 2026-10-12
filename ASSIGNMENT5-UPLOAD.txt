@@ -1,0 +1,18 @@
+ASSIGNMENT 5 - ADD TO YOUR EXISTING WEBSITE
+
+1. Extract this ZIP.
+2. Open https://github.com/rarecarson-png/auto-insights
+3. Click Add file > Upload files. Upload the extracted files and folders, not the ZIP.
+4. Commit changes and wait for GitHub Pages to deploy.
+5. Open and submit:
+https://rarecarson-png.github.io/auto-insights/assignment5.html
+
+This URL works only after uploading and successful deployment.
+Keep your existing style.css, dataset.html, and other website files.
+
+To link Assignment 5 from the homepage, edit its existing Assignment 05 card in index.html:
+Change Planned to Report available and add:
+<a href="assignment5.html">Read Assignment 5 →</a>
+
+This package preserves Assignment 4 and adds Assignment 5. The new page embeds all ten charts. Each includes Observation, Interpretation, and Research Implication. Five findings are included for the paper. No Python is needed to view the page.
+The existing homepage is not replaced because its current live version could not be verified.

@@ -1,0 +1,22 @@
+ASSIGNMENT 4 — UPLOAD TO YOUR EXISTING GITHUB PAGES WEBSITE
+
+1. Extract this ZIP (Windows: right-click > Extract All).
+2. Open https://github.com/rarecarson-png/auto-insights
+3. Select Add file > Upload files.
+4. Drag all files AND the sql_results folder from inside this extracted folder.
+   Do not upload the ZIP itself or the outer Assignment 4 folder.
+5. Commit changes. Keep all existing site files. data_cleaned.csv is unchanged.
+6. Wait for the GitHub Pages deployment to finish.
+7. Open and submit:
+   https://rarecarson-png.github.io/auto-insights/assignment4.html
+
+This address will work only AFTER you upload and GitHub Pages deploys it.
+
+OPTIONAL HOMEPAGE LINK:
+In index.html, find the Assignment 04 card. Change Planned to Report available.
+Add this link inside that card, below its description:
+<a href="assignment4.html">Read Assignment 4 →</a>
+
+The page contains eight executed queries, complete results, two charts,
+database structure, a research explanation, limitations, and source attribution.
+The SQLite database, import script, source CSV, and query-result CSVs are included.
