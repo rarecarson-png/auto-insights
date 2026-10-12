@@ -7,7 +7,12 @@
     content="A data visualization research project exploring vehicle features and MSRP.">
   <title>Auto Insights | Vehicle Price Research</title>
   <link rel="stylesheet" href="style.css">
-</head>
+<style>
+.site-header nav{flex-wrap:wrap}.assignment-card.active{opacity:1;border-color:var(--accent)}
+.assignment-card.active a{display:inline-block;font-weight:700}.table-wrap{overflow-x:auto}
+#midterm .button,#results .button{margin:6px 6px 6px 0}section{scroll-margin-top:130px}
+@media(max-width:700px){.site-header{position:static}section{scroll-margin-top:20px}.table-wrap table{min-width:650px}}
+</style></head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -21,7 +26,7 @@
       <a href="assignment2.html">Assignment 2</a>
       <a href="assignment3.html">Assignment 3</a>
       <a href="#assignments">Assignments</a>
-      <a href="#references">References</a>
+      <a href="#midterm">Midterm</a><a href="#models">AI Models</a><a href="#results">Results</a><a href="#next-steps">Next Steps</a>
     </nav>
   </header>
 
@@ -45,7 +50,7 @@
           </a>
         </div>
 
-        <p class="author">Carson Davis · Semester Research Project</p>
+        <p><a class="button primary" href="#midterm">Start midterm presentation →</a></p><p class="author">Carson Davis · Semester Research Project</p>
       </div>
 
       <aside class="hero-card" aria-label="Project summary">
@@ -69,12 +74,11 @@
 
         <div class="summary-row">
           <span>Current work</span>
-          <strong>Proposal &amp; dataset inspection</strong>
+          <strong>Assignments 1–5 &amp; midterm review</strong>
         </div>
 
         <p class="card-note">
-          The original dataset has been inspected. Analytical findings
-          and charts will follow data preparation and analysis.
+          Data investigation, cleaning, SQL analysis, and ten exploratory charts are available. Predictive model experiments are the next phase.
         </p>
       </aside>
     </section>
@@ -85,7 +89,7 @@
           <p class="eyebrow">ASSIGNMENT 01</p>
           <h2>Research question &amp; proposal</h2>
         </div>
-        <span class="badge">Proposal draft</span>
+        <span class="badge">Research plan</span>
       </div>
 
       <div class="grid two-columns">
@@ -248,8 +252,7 @@
           </p>
           <p class="muted">
             The explorer preserves the original records, including
-            missing values and repeated rows. Cleaning decisions
-            will be documented separately.
+            missing values and repeated rows. Cleaning decisions are documented in Assignment 3, with 11,199 records retained after removing exact duplicates.
           </p>
         </div>
 
@@ -270,7 +273,7 @@
       <div class="assignment-grid">
         <article class="assignment-card active">
           <span class="assignment-number">01</span>
-          <span class="status">Draft available</span>
+          <span class="status">Available</span>
           <h3>Research Proposal</h3>
           <p>Problem, questions, variables, and hypotheses.</p>
           <a href="#proposal">Read proposal →</a>
@@ -294,19 +297,9 @@
           <a href="assignment3.html">Read Assignment 3 →</a>
         </article>
 
-        <article class="assignment-card">
-          <span class="assignment-number">04</span>
-          <span class="status">Planned</span>
-          <h3>SQL Analysis</h3>
-          <p>Queries, grouped comparisons, and documented results.</p>
-        </article>
+        <article class="assignment-card active"><span class="assignment-number">04</span><span class="status">Report available</span><h3>SQL Analysis</h3><p>Eight executed SQL queries, result tables, and two visualizations.</p><a href="assignment4.html">Read Assignment 4 →</a></article>
 
-        <article class="assignment-card">
-          <span class="assignment-number">05</span>
-          <span class="status">Planned</span>
-          <h3>Exploratory Analysis</h3>
-          <p>Distributions, unusual values, and initial relationships.</p>
-        </article>
+        <article class="assignment-card active"><span class="assignment-number">05</span><span class="status">Report available</span><h3>Exploratory Data Analysis</h3><p>Ten exploratory visualizations with observations, interpretations, and five research findings.</p><a href="assignment5.html">Read Assignment 5 →</a></article>
 
         <article class="assignment-card">
           <span class="assignment-number">06</span>
@@ -364,6 +357,49 @@
         the instructor.
       </p>
     </section>
+
+
+<section class="section" id="midterm">
+ <div class="section-heading"><div><p class="eyebrow">MIDTERM PRESENTATION</p><h2>My project so far</h2></div><span class="badge">Present directly from this website</span></div>
+ <div class="grid two-columns">
+  <article class="card"><h3>Project introduction</h3><p>My project is Auto Insights. I selected Cooper Union’s Car Features and MSRP dataset from Kaggle to investigate how vehicle specifications and brand relate to recorded prices.</p><p>I chose this topic because comparing cars provides a practical way to connect data analysis with consumer decisions. The dataset combines prices, horsepower, fuel economy, brand, and vehicle categories, which support several types of visual comparisons.</p><p>The problem is price transparency: buyers face many specifications and price differences without an easy way to compare them. My project explains patterns in this historical dataset. It does not provide current purchase prices or personalized buying advice.</p></article>
+  <article class="card"><h3>Website features to demonstrate</h3><ol><li>Use the navigation to move between the proposal, assignments, results, model plan, and next steps.</li><li>Open the <a href="dataset.html">dataset explorer</a> to inspect records and available search, filter, and sorting controls.</li><li>Open each completed assignment below to show the progression from raw data to exploratory findings.</li><li>Use the downloadable data, scripts, and SQL results to trace how the analysis was produced.</li></ol></article>
+ </div>
+ <article class="card" style="margin-top:24px"><h3>Live presentation order</h3><p><a href="#overview">1. Website overview</a> → <a href="#assignments">2. Previous assignments</a> → <a href="#proposal">3. Kaggle project and problem</a> → <a href="#research-plan">4. Research plan</a> → <a href="#models">5. Planned AI models</a> → <a href="#results">6. Preliminary results</a> → <a href="#next-steps">7. Next steps</a></p><p>Assignments 1–5 are available. Assignments 6–12 remain labeled Planned because they are future stages of the project.</p></article>
+</section>
+<section class="section" id="research-plan">
+ <div class="section-heading"><div><p class="eyebrow">RESEARCH PLAN</p><h2>Goals and experimental design</h2></div></div>
+ <div class="grid two-columns"><article class="card"><h3>What I want to accomplish</h3><ol><li>Describe how recorded MSRP differs across brands, vehicle sizes, and performance levels.</li><li>Identify data-quality issues that affect those comparisons.</li><li>Compare three predictive models to estimate recorded MSRP from available vehicle characteristics.</li><li>Build visual explanations of model errors and feature relationships.</li><li>Document the methods, results, limitations, and conclusions in a research paper.</li></ol></article><article class="card"><h3>Planned evaluation</h3><p>The prediction target will be recorded MSRP. Candidate predictors include brand, model year, horsepower, cylinders, vehicle size and style, transmission, and driven wheels. Fuel-economy fields will require unit checks before inclusion.</p><p>I will reserve approximately 20% of the data for testing, keeping each make–model group in only one split so related trims do not appear in both training and testing. I will tune models using grouped cross-validation within the training set.</p><p>Preprocessing will be fitted on training data only. Missing-value handling and category encoding will be applied consistently. MSRP-derived columns, including log10_msrp and price-outlier flags, will not be used as input features.</p></article></div>
+ <article class="card" style="margin-top:24px"><h3>How I will measure performance</h3><p>I will report MAE (average absolute error in dollars), RMSE (which gives larger errors more weight), and R² on the same held-out test records. A training-set median-price predictor will provide a simple baseline. I will also inspect predicted-versus-observed plots and errors by vehicle size, year, and price range.</p><p>Sensitivity checks will compare results with and without the $2,000 price-floor records and extreme-price records. These checks will be reported separately, with the same evaluation rules and explicit sample sizes.</p></article>
+</section>
+<section class="section" id="models">
+ <div class="section-heading"><div><p class="eyebrow">AI / MACHINE LEARNING</p><h2>Three planned prediction models</h2></div><span class="badge">Planned · not yet trained</span></div>
+ <div class="assignment-grid">
+ <article class="card"><h3>1. Linear Regression</h3><p>Estimates price using a weighted combination of vehicle features. This gives a straightforward starting point for evaluating whether an approximately linear relationship is useful.</p><p><strong>Purpose:</strong> Provide an interpretable comparison model. Encoded categories and feature relationships require careful interpretation.</p></article>
+ <article class="card"><h3>2. Decision Tree Regressor</h3><p>Splits records into groups using feature thresholds and categories represented numerically. Each terminal group produces a predicted price.</p><p><strong>Purpose:</strong> Explore nonlinear relationships and feature combinations. Tree depth and minimum leaf size will be controlled to reduce overfitting.</p></article>
+ <article class="card"><h3>3. Random Forest Regressor</h3><p>Combines predictions from many decision trees trained with randomness in their data and feature choices.</p><p><strong>Purpose:</strong> Test whether combining trees improves held-out prediction accuracy over a single tree and linear regression.</p></article>
+ </div><p class="section-note">These are three supervised regression models, plus a simple median-price baseline. No model scores are reported yet because training and evaluation have not been completed.</p>
+</section>
+<section class="section" id="results">
+ <div class="section-heading"><div><p class="eyebrow">PRELIMINARY RESULTS</p><h2>What the data shows so far</h2></div><span class="badge">Exploratory analysis completed</span></div>
+ <article class="card"><p>The current results come from data cleaning, executed SQL queries, and exploratory analysis. They are descriptive findings, not trained-model performance results.</p>
+ <div class="table-wrap"><table><caption>Selected findings from Assignments 3–5</caption><thead><tr><th>Finding</th><th>Evidence</th><th>Meaning for the research</th></tr></thead><tbody>
+ <tr><td>Duplicate records affect the starting sample</td><td>11,914 original rows; 715 exact duplicates removed; 11,199 retained.</td><td>Avoid giving duplicated specifications extra weight.</td></tr>
+ <tr><td>Recorded prices are right-skewed</td><td>Mean $41,926; median $30,675.</td><td>Compare robust summaries and inspect high-price model errors.</td></tr>
+ <tr><td>Horsepower and price are positively associated</td><td>Pearson r = 0.659 across 11,130 complete pairs.</td><td>Include horsepower as a candidate predictor, while considering brand, year, and size.</td></tr>
+ <tr><td>Median prices differ across sizes</td><td>Compact $23,650; midsize $33,295; large $39,970.</td><td>Evaluate group differences and prediction errors by size.</td></tr>
+ <tr><td>Missing horsepower is unevenly distributed</td><td>44 of 66 electric records (66.7%) lack horsepower.</td><td>Dropping missing records disproportionately excludes electric vehicles.</td></tr>
+ </tbody></table></div><p>Correlation does not prove causation. These records describe selected vehicle specifications from model years 1990–2017, not a random sample of current sales.</p>
+ <p><a class="button primary" href="assignment5.html">Open all ten exploratory charts →</a> <a class="button secondary" href="assignment4.html">Open SQL results →</a></p></article>
+</section>
+<section class="section" id="contribution">
+ <div class="section-heading"><div><p class="eyebrow">SOCIETAL PROBLEM AND CONTRIBUTION</p><h2>Making vehicle comparisons easier to understand</h2></div></div>
+ <div class="grid two-columns"><article class="card"><h3>The societal problem</h3><p>Vehicle affordability and unclear price comparisons affect consumers. Buyers need understandable information about the relationship between price, performance, and vehicle categories. Historical data illustrates these patterns, but it does not establish whether a current listing is fairly priced.</p><h3>What I have developed</h3><p>A website that connects a dataset explorer, data-quality documentation, reproducible cleaning, executed SQL analysis, and ten exploratory charts. Every important exploratory chart includes an observation, interpretation, and research implication.</p></article><article class="card"><h3>Planned contribution to Data Visualization</h3><p>I will connect vehicle comparisons with model-error visualizations, showing where predictions work well and where they fail. I will evaluate raw versus logarithmic price views, compare error patterns across groups, and make missing values and uncertain comparisons visible.</p><p>This is an applied visualization and evaluation project, not a claim to invent a new machine-learning algorithm. I have learned that skewed prices, uneven model-year coverage, and missingness change how a chart should be interpreted.</p></article></div>
+</section>
+<section class="section" id="next-steps">
+ <div class="section-heading"><div><p class="eyebrow">NEXT STEPS</p><h2>From exploration to a research paper</h2></div></div>
+ <article class="card"><ol><li><strong>Validate the remaining data issues.</strong> Review the $2,000 price floor, unusually expensive vehicles, and electric-efficiency units.</li><li><strong>Prepare reproducible model experiments.</strong> Create grouped training and test splits, fit preprocessing on training data, and establish the median baseline.</li><li><strong>Train and compare the three models.</strong> Report held-out MAE, RMSE, R², and group-level errors without selecting models based on test performance.</li><li><strong>Develop final visualizations and an interactive dashboard.</strong> Add clear filters, readable labels, accessible colors, and views linking price patterns to prediction errors.</li><li><strong>Write and revise the research paper.</strong> Include the societal problem, research questions, dataset, methods, model experiments, visualization contribution, results, limitations, conclusions, and references.</li></ol><p>The final paper will distinguish completed evidence from planned work, explain what the experiments show, and discuss how sampling and data-quality limitations affect the conclusions.</p></article>
+</section>
 
     <section class="section" id="references">
       <div class="section-heading">
