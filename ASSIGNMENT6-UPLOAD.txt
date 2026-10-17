@@ -1,13 +1,6 @@
-ASSIGNMENT 6 UPLOAD
+ASSIGNMENT 6 - MATCHING ORIGINAL SITE STYLE
 
-1. Extract this ZIP.
-2. Open https://github.com/rarecarson-png/auto-insights
-3. Select Add file > Upload files.
-4. Upload the extracted contents, including the assignment6_figures folder. Do not upload the ZIP itself.
-5. Commit changes and wait for GitHub Pages to deploy.
-6. Open and check this URL, then submit it:
+Extract this ZIP and upload its contents to your auto-insights GitHub repository using Add file > Upload files. Commit changes. Replace assignment6.html and upload the assignment6_figures folder and script. The homepage is not included in this style-fix package.
+
+After deployment, refresh with Ctrl+Shift+R:
 https://rarecarson-png.github.io/auto-insights/assignment6.html
-
-The included index.html adds Assignment 6 to the homepage from your saved project. This is an update package; keep all existing repository files.
-
-The page embeds all chart images, so assignment6.html also opens locally. For reproduction, keep the script beside the existing data_cleaned.csv and eda_figures folder.
