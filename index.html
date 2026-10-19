@@ -12,23 +12,11 @@
 .assignment-card.active a{display:inline-block;font-weight:700}.table-wrap{overflow-x:auto}
 #midterm .button,#results .button{margin:6px 6px 6px 0}section{scroll-margin-top:130px}
 @media(max-width:700px){.site-header{position:static}section{scroll-margin-top:20px}.table-wrap table{min-width:650px}}
-</style></head>
+</style><link rel="stylesheet" href="navigation.css"></head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <a class="logo" href="index.html">AUTO<span>INSIGHTS</span></a>
-
-    <nav aria-label="Main navigation">
-      <a href="#overview">Overview</a>
-      <a href="#proposal">Research Proposal</a>
-      <a href="dataset.html">Dataset</a>
-      <a href="assignment2.html">Assignment 2</a>
-      <a href="assignment3.html">Assignment 3</a>
-      <a href="#assignments">Assignments</a>
-      <a href="#midterm">Midterm</a><a href="#models">AI Models</a><a href="visualizations.html">Visualizations &amp; Model Comparison</a><a href="#results">Results</a><a href="#next-steps">Next Steps</a>
-    </nav>
-  </header>
+  <header class="ai-header"><div class="ai-bar"><a class="ai-logo" href="index.html">AUTO<span>INSIGHTS</span></a><nav class="ai-links" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="index.html#assignments">Coursework</a><a href="dataset.html">Dataset</a><a href="visualizations.html">Charts</a><a href="models.html">16 Models</a><a href="index.html#midterm">Midterm</a></nav><details class="ai-mobile"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="index.html" aria-current="page">Home</a><a href="index.html#assignments">Coursework</a><a href="dataset.html">Dataset</a><a href="visualizations.html">Charts</a><a href="models.html">16 Models</a><a href="index.html#midterm">Midterm</a></nav></details></div></header><aside class="ai-local"><details><summary>On this page & related work</summary><nav aria-label="Section navigation"><a href="#overview">Overview</a><a href="#proposal">Research proposal</a><a href="#research-plan">Research plan</a><a href="#assignments">Assignments 1–12</a><a href="#midterm">Midterm</a><a href="#models">Model research</a><a href="#results">Results</a><a href="#contribution">Contribution</a><a href="#next-steps">Next steps</a><a href="#references">References</a></nav></details></aside>
 
   <main id="main">
     <section class="hero" id="overview">
@@ -74,11 +62,11 @@
 
         <div class="summary-row">
           <span>Current work</span>
-          <strong>Assignments 1–5 &amp; midterm review</strong>
+          <strong>Assignments 1–6 &amp; model comparison</strong>
         </div>
 
         <p class="card-note">
-          Data investigation, cleaning, SQL analysis, and ten exploratory charts are available. Three predictive models have now been evaluated in a preliminary grouped holdout experiment.
+          Data investigation, cleaning, SQL analysis, and ten exploratory charts are available. Sixteen predictive models have now been evaluated with grouped cross-validation and a shared holdout. The original three-model experiment is retained below.
         </p>
       </aside>
     </section>
@@ -364,18 +352,18 @@
 </section>
 <section class="section" id="research-plan">
  <div class="section-heading"><div><p class="eyebrow">RESEARCH PLAN</p><h2>Goals and experimental design</h2></div></div>
- <div class="grid two-columns"><article class="card"><h3>What I want to accomplish</h3><ol><li>Describe how recorded MSRP differs across brands, vehicle sizes, and performance levels.</li><li>Identify data-quality issues that affect those comparisons.</li><li>Compare three predictive models to estimate recorded MSRP from available vehicle characteristics.</li><li>Build visual explanations of model errors and feature relationships.</li><li>Document the methods, results, limitations, and conclusions in a research paper.</li></ol></article><article class="card"><h3>Planned evaluation</h3><p>The prediction target will be recorded MSRP. Candidate predictors include brand, model year, horsepower, cylinders, vehicle size and style, transmission, and driven wheels. Fuel-economy fields will require unit checks before inclusion.</p><p>The first experiment reserved 20% of make–model groups for testing, producing 8,875 training rows and 2,324 test rows with zero overlapping groups. Grouped cross-validation within the training set is planned for the next experiment; it was not performed in this first run.</p><p>Preprocessing will be fitted on training data only. Missing-value handling and category encoding will be applied consistently. MSRP-derived columns, including log10_msrp and price-outlier flags, will not be used as input features.</p></article></div>
+ <div class="grid two-columns"><article class="card"><h3>What I want to accomplish</h3><ol><li>Describe how recorded MSRP differs across brands, vehicle sizes, and performance levels.</li><li>Identify data-quality issues that affect those comparisons.</li><li>Compare at least 16 predictive models to estimate recorded MSRP from available vehicle characteristics.</li><li>Build visual explanations of model errors and feature relationships.</li><li>Document the methods, results, limitations, and conclusions in a research paper.</li></ol></article><article class="card"><h3>Planned evaluation</h3><p>The prediction target will be recorded MSRP. Candidate predictors include brand, model year, horsepower, cylinders, vehicle size and style, transmission, and driven wheels. Fuel-economy fields will require unit checks before inclusion.</p><p>The first experiment reserved 20% of make–model groups for testing, producing 8,875 training rows and 2,324 test rows with zero overlapping groups. The new 16-model experiment adds three-fold grouped cross-validation within the training set; the original first run did not include it.</p><p>Preprocessing will be fitted on training data only. Missing-value handling and category encoding will be applied consistently. MSRP-derived columns, including log10_msrp and price-outlier flags, will not be used as input features.</p></article></div>
  <article class="card" style="margin-top:24px"><h3>How I will measure performance</h3><p>I will report MAE (average absolute error in dollars), RMSE (which gives larger errors more weight), and R² on the same held-out test records. A training-set median-price predictor will provide a simple baseline. I will also inspect predicted-versus-observed plots and errors by vehicle size, year, and price range.</p><p>Sensitivity checks will compare results with and without the $2,000 price-floor records and extreme-price records. These checks will be reported separately, with the same evaluation rules and explicit sample sizes.</p></article>
 </section>
-<section class="section" id="models">
- <div class="section-heading"><div><p class="eyebrow">AI / MACHINE LEARNING</p><h2>Three prediction models</h2></div><span class="badge">Preliminary training completed</span></div>
+<section class="section" id="models"><div class="ai-update"><h2>16 machine learning models evaluated</h2><p>Now includes 16 regression estimators plus a median baseline. Extra Trees leads grouped validation; Random Forest has the lowest error on this holdout.</p><a class="button primary" href="models.html">Explore all 16 models and the best-model breakdown →</a><p class="note">The initial three-model research notes below remain for project history.</p></div>
+ <div class="section-heading"><div><p class="eyebrow">AI / MACHINE LEARNING</p><h2>Original three-model experiment</h2></div><span class="badge">Preliminary training completed</span></div>
  <div class="assignment-grid">
  <article class="card"><h3>1. Linear Regression</h3><p>Estimates price using a weighted combination of vehicle features. This gives a straightforward starting point for evaluating whether an approximately linear relationship is useful.</p><p><strong>Purpose:</strong> Provide an interpretable comparison model. Encoded categories and feature relationships require careful interpretation.</p></article>
  <article class="card"><h3>2. Decision Tree Regressor</h3><p>Splits records into groups using feature thresholds and categories represented numerically. Each terminal group produces a predicted price.</p><p><strong>Purpose:</strong> Explore nonlinear relationships and feature combinations. Tree depth and minimum leaf size will be controlled to reduce overfitting.</p></article>
  <article class="card"><h3>3. Random Forest Regressor</h3><p>Combines predictions from many decision trees trained with randomness in their data and feature choices.</p><p><strong>Purpose:</strong> Test whether combining trees improves held-out prediction accuracy over a single tree and linear regression.</p></article>
  </div><p class="section-note">These three supervised regression models and a median-price baseline have been trained and evaluated on the same grouped holdout split. <a href="visualizations.html#comparison">View measured model results →</a></p>
 </section>
-<section class="section" id="results">
+<section class="section" id="results"><div class="ai-update"><strong>Latest benchmark:</strong> Extra Trees validation MAE $8,027; Random Forest holdout MAE $6,255. <a href="models.html#verdict">Read the complete breakdown</a>. Results below document the original experiment and EDA.</div>
  <div class="section-heading"><div><p class="eyebrow">PRELIMINARY RESULTS</p><h2>What the data and models show so far</h2></div><span class="badge">Exploratory analysis completed</span></div>
  <article class="card"><p>The project now includes exploratory findings and an executed model experiment. On 2,324 held-out records, Random Forest achieved MAE $6,217, RMSE $13,485, and R² 0.921. These are preliminary results from one grouped split. <a href="visualizations.html#comparison">Open the complete comparison and diagnostics →</a></p>
  <div class="table-wrap"><table><caption>Selected findings from Assignments 3–5</caption><thead><tr><th>Finding</th><th>Evidence</th><th>Meaning for the research</th></tr></thead><tbody>
@@ -393,7 +381,7 @@
 </section>
 <section class="section" id="next-steps">
  <div class="section-heading"><div><p class="eyebrow">NEXT STEPS</p><h2>From exploration to a research paper</h2></div></div>
- <article class="card"><ol><li><strong>Validate the remaining data issues.</strong> Review the $2,000 price floor, unusually expensive vehicles, and electric-efficiency units.</li><li><strong>Prepare reproducible model experiments.</strong> The first grouped split and median baseline are complete. Add grouped cross-validation within the training set and preserve fresh evaluation data for later model development.</li><li><strong>Train and compare the three models.</strong> The initial models and error diagnostics are complete. Next, evaluate log-price targets and sensitivity to source-price-floor and extreme-price records.</li><li><strong>Develop final visualizations and an interactive dashboard.</strong> Add clear filters, readable labels, accessible colors, and views linking price patterns to prediction errors.</li><li><strong>Write and revise the research paper.</strong> Include the societal problem, research questions, dataset, methods, model experiments, visualization contribution, results, limitations, conclusions, and references.</li></ol><p>The final paper will distinguish completed evidence from planned work, explain what the experiments show, and discuss how sampling and data-quality limitations affect the conclusions.</p></article>
+ <article class="card"><ol><li><strong>Validate the remaining data issues.</strong> Review the $2,000 price floor, unusually expensive vehicles, and electric-efficiency units.</li><li><strong>Prepare reproducible model experiments.</strong> The first grouped split and median baseline are complete. Three-fold grouped cross-validation is now complete for 16 models. Next, repeat grouped validation and preserve fresh evaluation data for later model development.</li><li><strong>Extend the model comparison.</strong> All 16 models and the initial error diagnostics are complete. Next, evaluate log-price targets and sensitivity to source-price-floor and extreme-price records.</li><li><strong>Develop final visualizations and an interactive dashboard.</strong> Add clear filters, readable labels, accessible colors, and views linking price patterns to prediction errors.</li><li><strong>Write and revise the research paper.</strong> Include the societal problem, research questions, dataset, methods, model experiments, visualization contribution, results, limitations, conclusions, and references.</li></ol><p>The final paper will distinguish completed evidence from planned work, explain what the experiments show, and discuss how sampling and data-quality limitations affect the conclusions.</p></article>
 </section>
 
     <section class="section" id="references">

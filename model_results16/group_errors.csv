@@ -1,0 +1,52 @@
+model,size,n,mae
+Linear Regression,compact,699,10235.47993754587
+Linear Regression,large,732,14404.517668180893
+Linear Regression,midsize,893,8415.712221489048
+Ridge,compact,699,13306.000157834596
+Ridge,large,732,18657.430900827505
+Ridge,midsize,893,12646.631606258836
+Lasso,compact,699,10934.971364452487
+Lasso,large,732,16112.74169641672
+Lasso,midsize,893,9147.800469601352
+Elastic Net,compact,699,12833.684830805778
+Elastic Net,large,732,17192.507547767087
+Elastic Net,midsize,893,11297.419061065266
+Bayesian Ridge,compact,699,10248.983255181578
+Bayesian Ridge,large,732,14419.387118045192
+Bayesian Ridge,midsize,893,8426.475239080051
+Huber Regression,compact,699,8103.841013515035
+Huber Regression,large,732,10459.116971702286
+Huber Regression,midsize,893,6730.125047266485
+SGD Regression,compact,699,15780.91624646369
+SGD Regression,large,732,23046.175002331594
+SGD Regression,midsize,893,15225.137020414186
+K-Nearest Neighbors,compact,699,6815.305685916452
+K-Nearest Neighbors,large,732,12320.386913689095
+K-Nearest Neighbors,midsize,893,7248.6099811009835
+Decision Tree,compact,699,6722.23173755576
+Decision Tree,large,732,12906.572028683975
+Decision Tree,midsize,893,7227.963670050152
+Extra Tree,compact,699,6076.699637150145
+Extra Tree,large,732,11577.142093327637
+Extra Tree,midsize,893,8454.633359624206
+Random Forest,compact,699,4368.757847451289
+Random Forest,large,732,8165.549640163448
+Random Forest,midsize,893,6164.895883337054
+Extra Trees,compact,699,4737.136475703759
+Extra Trees,large,732,8710.480088194818
+Extra Trees,midsize,893,6151.622063221596
+Gradient Boosting,compact,699,5771.578318856135
+Gradient Boosting,large,732,10545.695310930969
+Gradient Boosting,midsize,893,6503.293858073518
+Histogram Gradient Boosting,compact,699,5587.685493732797
+Histogram Gradient Boosting,large,732,10314.48951052299
+Histogram Gradient Boosting,midsize,893,6360.105051213688
+AdaBoost,compact,699,10842.087458691389
+AdaBoost,large,732,15290.628716588788
+AdaBoost,midsize,893,11929.977399373493
+Support Vector Regression,compact,699,6675.914487377723
+Support Vector Regression,large,732,9129.562904586053
+Support Vector Regression,midsize,893,7556.541952751748
+Median baseline,compact,699,19061.137339055793
+Median baseline,large,732,26740.0956284153
+Median baseline,midsize,893,14501.388577827547

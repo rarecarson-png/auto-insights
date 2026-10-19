@@ -1,0 +1,17 @@
+AUTO INSIGHTS: NAVIGATION + 16 MODELS UPDATE
+
+1. Extract Auto-Insights-16-Models-Update.zip.
+2. Open https://github.com/rarecarson-png/auto-insights
+3. Add file > Upload files. Upload ALL extracted contents, including navigation.css and model_results16. Do not upload the ZIP itself or nest the contents inside another folder.
+4. Commit changes. Keep all existing repository files.
+5. Wait for GitHub Pages, then refresh with Ctrl+Shift+R.
+
+Home: https://rarecarson-png.github.io/auto-insights/
+New comparison: https://rarecarson-png.github.io/auto-insights/models.html
+Assignment 6: https://rarecarson-png.github.io/auto-insights/assignment6.html
+
+Includes updated navigation on all nine pages, sixteen executed ML regressors plus a baseline, three-fold grouped validation, actual holdout predictions, and explanatory results. Existing reports, historical model results, dataset files, and scripts are preserved from the current GitHub repository.
+
+Verified: all internal file links and anchors; 17 reported holdout MAEs recomputed from predictions; zero train/holdout make-model overlap; no fit-convergence warnings. Browser rendering could not be tested in this environment.
+
+The saved holdout has been inspected in earlier work; do not call it fresh final evaluation data. Extra Trees wins validation; Random Forest wins the existing holdout.

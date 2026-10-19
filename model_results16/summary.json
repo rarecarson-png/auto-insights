@@ -1,0 +1,42 @@
+{
+  "selected_model": "Extra Trees",
+  "selection": "Lowest mean 3-fold grouped cross-validation MAE within training data; no hyperparameter search",
+  "n": 11199,
+  "train_n": 8875,
+  "test_n": 2324,
+  "train_groups": 742,
+  "test_groups": 186,
+  "group_overlap": 0,
+  "features": [
+    "year",
+    "engine_hp",
+    "engine_cylinders",
+    "make",
+    "vehicle_size",
+    "vehicle_style",
+    "transmission",
+    "driven_wheels"
+  ],
+  "seed": 42,
+  "sklearn": "1.8.0",
+  "sha256": "e7f3812484b4444be6d905846774524dab7c28cbeb22a6a0140f967b60b2644c",
+  "parameters": {
+    "Linear Regression": "LinearRegression()",
+    "Ridge": "Ridge(alpha=10)",
+    "Lasso": "Lasso(alpha=0.001, max_iter=10000)",
+    "Elastic Net": "ElasticNet(alpha=0.001, max_iter=10000)",
+    "Bayesian Ridge": "BayesianRidge()",
+    "Huber Regression": "HuberRegressor(max_iter=5000)",
+    "SGD Regression": "SGDRegressor(alpha=0.001, max_iter=3000, random_state=42, tol=1e-05)",
+    "K-Nearest Neighbors": "KNeighborsRegressor(n_neighbors=10, weights='distance')",
+    "Decision Tree": "DecisionTreeRegressor(max_depth=8, min_samples_leaf=5, random_state=42)",
+    "Extra Tree": "ExtraTreeRegressor(max_depth=18, min_samples_leaf=2, random_state=42)",
+    "Random Forest": "RandomForestRegressor(max_depth=18, min_samples_leaf=2, n_estimators=120,\n                      n_jobs=2, random_state=42)",
+    "Extra Trees": "ExtraTreesRegressor(max_depth=18, min_samples_leaf=2, n_estimators=120,\n                    n_jobs=2, random_state=42)",
+    "Gradient Boosting": "GradientBoostingRegressor(min_samples_leaf=5, n_estimators=150, random_state=42)",
+    "Histogram Gradient Boosting": "HistGradientBoostingRegressor(early_stopping=False, l2_regularization=1,\n                              max_iter=150, max_leaf_nodes=20, random_state=42)",
+    "AdaBoost": "AdaBoostRegressor(learning_rate=0.05, n_estimators=80, random_state=42)",
+    "Support Vector Regression": "SVR(C=10, epsilon=0.05)",
+    "Median baseline": "DummyRegressor(strategy='median')"
+  }
+}
