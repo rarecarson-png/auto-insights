@@ -1,17 +1,9 @@
-AUTO INSIGHTS - COMPLETE WEBSITE UPDATE
+ASSIGNMENT 7
 
-1. Extract this ZIP.
-2. Open https://github.com/rarecarson-png/auto-insights
-3. Select Add file > Upload files.
-4. Upload ALL extracted files and folders, including index.html, visualizations.html, eda_figures and model_results. Upload contents, not the ZIP itself.
-5. Commit changes and wait for GitHub Pages to deploy.
-6. Open your website and press Ctrl+Shift+R to refresh.
+1. Extract the ZIP. Open assignment7.html to view the finished report. Charts are embedded, so this HTML file also works by itself.
+2. For your existing website, upload assignment7.html beside index.html, then add a navigation link to assignment7.html. This package does not publish or change your live website.
+3. Assignment7_Executed.ipynb contains the Python experiment, captured outputs, charts, and interpretation. Submit it if a notebook is required.
+4. To rerun in Colab, upload the notebook and data.csv, then run its code cell.
+5. Locally: install requirements.txt, open a terminal in this folder, and run python analysis.py. Results appear in results/. The HTML and narrative are the recorded results from the supplied run.
 
-Homepage: https://rarecarson-png.github.io/auto-insights/
-Visualizations & Model Comparison: https://rarecarson-png.github.io/auto-insights/visualizations.html
-Assignment 5: https://rarecarson-png.github.io/auto-insights/assignment5.html
-
-This update includes Assignments 1-5, the dataset explorer, the midterm sections, ten exploratory charts, and a new tabbed page with real results from three trained models plus a baseline.
-
-The model comparison is a preliminary single-split experiment, not final validated performance. Methods, limitations, scores, predictions, split membership and scripts are included. No Python is needed to view the website.
-Assignments 6-12 remain future coursework.
+Includes 5 major findings and 16 evaluated machine learning models plus a separate median baseline.

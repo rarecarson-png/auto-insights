@@ -1,0 +1,21 @@
+{
+  "raw_n": 11914,
+  "analysis_n": 11199,
+  "duplicates_removed": 715,
+  "train_n": 8875,
+  "test_n": 2324,
+  "train_groups": 742,
+  "test_groups": 186,
+  "hp_rho": 0.8331123571344268,
+  "hp_p": 0.0,
+  "hp_n": 11130,
+  "size_h": 1519.155336636169,
+  "size_p": 0.0,
+  "mpg_rho": -0.5103972389715598,
+  "mpg_p": 0.0,
+  "mpg_n": 11130,
+  "best": "Extra Trees",
+  "baseline_mae": 19727.721600688466,
+  "sklearn": "1.8.0",
+  "sha256": "26e39d3e902246d01a93ae390f51129a288079aefad2cb3292751a262ffd62d8"
+}
