@@ -1,0 +1,18 @@
+Carson Davis — Auto Insights
+Repository: https://github.com/rarecarson-png/auto-insights
+
+Assignment 8: https://rarecarson-png.github.io/auto-insights/assignment8.html
+Assignment 9: https://rarecarson-png.github.io/auto-insights/assignment9.html
+Assignment 10: https://rarecarson-png.github.io/auto-insights/assignment10.html
+Assignment 11: https://rarecarson-png.github.io/auto-insights/assignment11.html
+
+Assignment 11 direct paper: https://rarecarson-png.github.io/auto-insights/research/paper.pdf
+Colab: https://colab.research.google.com/github/rarecarson-png/auto-insights/blob/main/research/Reproduce.ipynb
+
+Assignment 8 includes three interactive Plotly charts and the first-three-sections IEEE draft.
+Assignment 9 includes the proposed workflow, source, 16-model comparison, and reproduction launcher.
+Assignment 10 includes six graph types with individual analysis and actual archived data.
+Assignment 11 is the full IEEE paper with conclusion and references.
+
+Overleaf: upload research/Assignment11_Overleaf.zip as a NEW project without extracting it.
+The exact deadline was not supplied. IEEE class: IEEEtran.cls, conference mode.
